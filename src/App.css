@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.Floorplan{
+    padding: 1%;
+    text-align: center;
+    color: white;
+    margin: auto;
+    height: 80vh;
+    width: 60vw;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 5fr 1fr 10fr 15fr;
+    grid-template-areas: 
+    "Bedroom1 LivingRoom LivingRoom Kitchen Kitchen"
+    "Bedroom1 LivingRoom LivingRoom Kitchen Kitchen"
+    "FullBath LivingRoom LivingRoom Kitchen Kitchen"
+    "Bedroom2 HalfBath Bedroom3 Bedroom3 Bedroom3 ";
   }
+
+.Bedroom1{
+  grid-area: Bedroom1;
+  background-color: #2B7188;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Bedroom2{
+  grid-area: Bedroom2;
+  background-color:  #2B7188;
 }
 
-.App-link {
-  color: #61dafb;
+.Bedroom3{
+  grid-area: Bedroom3;
+  background-color: #2B7188;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Kitchen{
+  grid-area: Kitchen;
+  background-color: #F1A73B;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 4fr;
+  grid-template-areas: 
+  "Oven Sink"
+  ". ."
+  ;
+}
+
+.LivingRoom{
+  grid-area: LivingRoom;
+  background-color: #C9AC82;
+}
+
+.FullBath{
+  grid-area: FullBath;
+  background-color: #728831;
+}
+
+.HalfBath{
+  grid-area: HalfBath;
+  background-color: #728831;
+}
+
+.Sink{
+  grid-area: Sink;
+  background-color: #935613;
+}
+
+.Oven{
+  grid-area: Oven;
+  background-color: #C94716;
 }
